@@ -54,12 +54,20 @@ export default function App() {
     return null
   }
 
+  const checkMarker = (marker) => {
+    return marker !== null
+  }
+
   useEffect(() => {
     const winner = calculateWinner(markers)
     if(winner === 'x') {
       Alert.alert("Game Over", "Player X Won !")
     } else if(winner == 'o') {
       Alert.alert("Game Over", "Player O Won !")
+    } else {
+      if(markers.filter(checkMarker).length === 9) {
+        Alert.alert("Game Over", "Draw !")
+      }
     }
   }, [markers])
 
