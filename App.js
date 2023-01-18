@@ -6,6 +6,11 @@ const windowWidth = Dimensions.get('window').width
 
 export default function App() {
   const [currentPlayer, setCurrentPlayer] = useState('O')
+  const [markers, setMarkers] = useState([
+    null, null, null,
+    null, null, null,
+    null, null, null
+  ])
 
   return (
     <SafeAreaView style={styles.container}>
@@ -18,33 +23,33 @@ export default function App() {
 
       <View style={styles.board}>
         <Pressable style={styles.cell}>
-          <Image style={styles.icon} source={require('./assets/x.png')}/>
+          <Image style={styles.icon} source={require('./assets/cross.png')}/>
         </Pressable>
         <Pressable style={styles.cell}>
-          <Image style={styles.icon} source={require('./assets/x.png')}/>
+          <Image style={styles.icon} source={require('./assets/cross.png')}/>
         </Pressable>
         <Pressable style={[styles.cell, styles.rightCells]}>
-          <Image style={styles.icon} source={require('./assets/x.png')}/>
+          <Image style={styles.icon} source={require('./assets/cross.png')}/>
         </Pressable>
 
         <Pressable style={styles.cell}>
-          <Image style={styles.icon} source={require('./assets/o.png')}/>
+          <Image style={styles.icon} source={require('./assets/zero.png')}/>
         </Pressable>
         <Pressable style={styles.cell}>
-          <Image style={styles.icon} source={require('./assets/x.png')}/>
+          <Image style={styles.icon} source={require('./assets/cross.png')}/>
         </Pressable>
         <Pressable style={[styles.cell, styles.rightCells]}>
-          <Image style={styles.icon} source={require('./assets/x.png')}/>
+          <Image style={styles.icon} source={require('./assets/cross.png')}/>
         </Pressable>
 
         <Pressable style={[styles.cell, styles.bottomCells]}>
-          <Image style={styles.icon} source={require('./assets/x.png')}/>
+          <Image style={styles.icon} source={require('./assets/cross.png')}/>
         </Pressable>
         <Pressable style={[styles.cell, styles.bottomCells]}>
-          <Image style={styles.icon} source={require('./assets/x.png')}/>
+          <Image style={styles.icon} source={require('./assets/cross.png')}/>
         </Pressable>
         <Pressable style={[styles.cell, styles.bottomCells, styles.rightCells]}>
-          <Image style={styles.icon} source={require('./assets/o.png')}/>
+          <Image style={styles.icon} source={require('./assets/zero.png')}/>
         </Pressable>
       </View>
 
