@@ -19,6 +19,14 @@
     ],
     "ios": {
       "supportsTablet": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "3d2d010d-b409-4def-b000-2f858a3ba884"
+      }
+    },
+    "android": {
+      "package": "com.nemzyxt.TicTacToe"
     }
   }
 }
